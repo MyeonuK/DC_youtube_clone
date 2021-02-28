@@ -1,0 +1,210 @@
+:root {
+    /* color */
+    --background-color: #ffffff;
+    --navbar-color: #263343;
+    --navbar-content-color: #ffffff;
+
+    /* size */
+    --navbar-logo-size: 20px;
+    --navbar-btn-size: 14px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro';
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 15px;
+}
+
+button {
+    border:none;
+    background-color: var(--background-color);
+}
+
+.navbar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+    background-color: var(--navbar-color);
+}
+
+.navbar .logo {
+    display: flex;
+}
+
+.navbar .logo a {
+    color: var(--navbar-content-color);
+    font-size: var(--navbar-logo-size);
+}
+
+.navbar .logo i {
+    color: red;
+    font-size: var(--navbar-logo-size);
+}
+
+.navbar button {
+    background-color: var(--navbar-color);
+    color: var(--navbar-content-color);
+    font-size: var(--navbar-btn-size);
+}
+
+.videobox {
+    position: relative;
+    width: 100%;
+    padding-bottom: 27%
+}
+
+.videobox .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.contents .description,
+.contents .next {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px 15px;
+}
+
+.contents .hashtag a {
+    font-size: 15px;
+    color:gray;
+    margin-right: 5px;
+}
+
+.description .title {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.description .history {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.description .buttons {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid gray 1px;
+}
+
+.description .buttons i {
+    font-size: 23px;
+}
+
+.description .buttons p {
+    font-size: 13px;
+}
+
+.description .channel {
+    display: flex;
+    padding: 15px 0px;
+    justify-content: space-between;
+}
+
+.description .channel a {
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+.description .channel a img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.description .profile h2 {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.description .profile p {
+    margin: 10px 0px;
+}
+
+.channel .subscribe_btn {
+    color: white;
+    font-size: 17px;
+    background-color: red;
+    border-radius: 6px;
+    width: 100px;
+    margin: 10px 10px;
+}
+
+.contents .next {
+    height: 100vh;
+    border-left: solid gray 1px;
+    list-style: none;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.next ul {
+    height: auto;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contents .next li {
+    height: 120px;
+    background-color: aquamarine;
+    border: solid;
+    margin: 0px 0px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+@media (max-width: 1000px) {
+    .contents {
+        flex-direction: column;
+    }
+
+    .videobox {
+        padding-bottom: 56.25%
+    }
+
+    .contents .description,
+.contents .next {
+    width: 92%;
+}
+
+.contents .next {
+    height: 100vh;
+    border-top: solid gray 1px;
+    border-left:none;
+    list-style: none;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+}
+}
