@@ -6,100 +6,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="javascript.js" defer></script>
     <script src="https://kit.fontawesome.com/02c6b17408.js" crossorigin="anonymous"></script>
 
-    <title>clone youtube</title>
+    <title>Youtube Clone</title>
 </head>
 
 <body>
-    <!--navbar-->
-    <header class="navbar">
-        <div class="logo">
-            <a href="#">
+    <!-- Navbar -->
+    <header class="navBar">
+        <span class="left">
+            <button class="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <button class="logo">
                 <i class="fab fa-youtube"></i>
-                Youtube
-            </a>
-        </div>
+                <span>Premium</span>
+            </button>
+        </span>
+        <span class="center">
+            <span class="searchBar">
+                <input class="textBox" type="text" name="inputWords"></input>
+                <button class="keyboardBtn">
+                    <i class="fas fa-keyboard"></i>
+                </button>
+                <button class="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </span>
+            <button class="recordBtn">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </span>
+        <span class="right">
+            <span class="buttons">
+                <button class="makeBtn">
+                    <i class="fas fa-video"></i>
+                </button>
+                <button class="appsBtn">
+                    <i class="fas fa-th"></i>
+                </button>
+                <button class="notiBtn">
+                    <i class="fas fa-bell"></i>
+                </button>
+            </span>
+            <img class="userImg" src="https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png" alt="user">
+        </span>
 
-        <div class="navbar__buttons">
-            <button class="search_btn">
-                <i class="fas fa-search"></i>
-            </button>
-            <button class="menu_btn">
-                <i class="fas fa-ellipsis-v"></i>
-            </button>
-        </div>
     </header>
-
-    <div class="videobox">
-        <iframe class="video" src="https://www.youtube.com/embed/OcVmaIlHZ1o" frameborder:"0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
-    </div>
-
-
-    <article class="contents">
-        <div class="description">
-            <div class="hashtag">
-                <a href="#">#아이유</a>
-                <a href="#">#IU</a>
-                <a href="#">#Lovepoem</a>
+    <section class="main">
+        <section class="content">
+            <!-- Video -->
+            <div class="playerBox">
+                <iframe class="video" src="https://www.youtube.com/embed/OcVmaIlHZ1o" frameborder:"0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-            <h1 class="title">[IU] 'Love poem' Live Clip</h1>
-            <p class="history">조회수 6,406,775회 / 2021.02.26.</p>
-            <div class="buttons">
-                <button>
-                    <i class="fas fa-thumbs-up"></i>
-                    <p>좋아요</p>
-                </button>
-                <button>
-                    <i class="fas fa-thumbs-down"></i>
-                    <p>싫어요</p>
-                </button>
-                <button>
-                    <i class="fas fa-share"></i>
-                    <p>공유</p>
-                </button>
-                <button>
-                    <i class="fas fa-plus"></i>
-                    <p>저장</p>
-                </button>
-                <button>
-                    <i class="fas fa-flag"></i>
-                    <p>신고</p>
-                </button>
-            </div>
-            <div class="channel">
-                <a href="#" class="profile">
-                    <img src="https://yt3.ggpht.com/ytc/AAUvwnhmeHHu62xly7TKx4vVXSpnoc6d-xUuzOsJpn9piA=s48-c-k-c0x00ffffff-no-rj-mo"
-                        alt="pic">
-                    <div>
-                        <h2>이지금 [IU Official]</h2>
-                        <p>구독자</p>
+
+            <!-- Content Description -->
+            <div class="contentBox">
+                <div class="videoInfo">
+                    <div class="hashtags">
+                        <a href="#">#아이유</a>
+                        <a href="#">#IU</a>
+                        <a href="#">#Lovepoem</a>
                     </div>
-                </a>
-                <button class="subscribe_btn">
-                    구독
-                </button>
+                    <h1 class="title">[IU] 'Love poem' Live Clip</h1>
+                    <div class="info">
+                        <span class="metadata">조회수 6,520,159회•2020. 11. 1.</span>
+                        <span class="function">
+                            <button class="likeBtn" id="underline">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>28만</span>
+                            </button>
+                            <button class="unlikeBtn" id="underline">
+                                <i class="fas fa-thumbs-down"></i>
+                                <span>1.2천</span>
+                            </button>
+                            <button class="shareBtn">
+                                <i class="fas fa-share"></i>
+                                <span>공유</span>
+                            </button>
+                            <button class="saveBtn">
+                                <i class="fas fa-plus-square"></i>
+                                <span>저장</span>
+                            </button>
+                            <button class="moreBtn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="profile">
+                    <div>
+                        <img class="thumbnail"
+                            src="https://yt3.ggpht.com/ytc/AAUvwnhmeHHu62xly7TKx4vVXSpnoc6d-xUuzOsJpn9piA=s88-c-k-c0x00ffffff-no-rj-mo"
+                            alt="profileImg">
+                        </span>
+                        <span class="channel">
+                            <a class="name" href="#">
+                                이지금 [IU Official] <i class="fas fa-music"></i>
+                            </a>
+                            <span class="subscriber">
+                                구독자 545만명
+                            </span>
+                        </span>
+                        <span class="function">
+                            <button class="subscriptionBtn">구독</button>
+                            <button class="notificationBtn">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                        </span>
+
+                    </div>
+                    <p class="description">
+                        [IU] 'Love poem' Live Clip<br>
+                        <br>
+                        * 본 영상은 'Love poem' 음원 발매 1주년을 맞이하여<br>
+                        보내주신 사랑과 성원에 힘입어 제작하게 된 라이브 클립 영상입니다.<br>
+
+                        모두에게 유난히 혼란스럽고 어려웠을 2020년이 이제 두 달 남짓 남았습니다.<br>
+                        헐거워진 곳으로 추위가 파고들지 못하도록, 어디에 계시든 사랑 근처에서 마음을 데울 수 있는 겨울 되시기를 바랍니다.<br>
+                        <br>
+                        <br>
+                        * We produced this live video, thanks to your love and support for the first anniversary of the
+                        release
+                        of the song, “Love Poem”.<br>
+                        <br>
+                        2020, which must have been particularly confusing and difficult for everyone, only has two more
+                        months
+                        left.<br>
+                        We hope that you have a heart-warming winter wherever you are, so that the cold does not get to
+                        you.<br>
+                        <br>
+                        <a href="#">#아이유</a> <a href="#">#IU</a> <a href="#">#Lovepoem</a><br>
+                    </p>
+                    <a href="#" class="moreBtn">더보기</a>
+                </div>
+
+                <div class="comments">
+                    <div class="commentsHeader">
+                        <span class="summary">댓글 14,411개</span>
+                        <button class="sortBtn">
+                            <i class="fas fa-sort-amount-down"></i>
+                            <span>정렬 기준</span>
+                        </button>
+                    </div>
+                    <div class="commentInputArea">
+                        <img class="userImg" src="https://www.himgs.com/imagenes/hello/social/hello-fb-logo.png"
+                            alt="user">
+                        <input class="textBox" type="text" name="inputWords" value="공개 댓글 추가 .."></input>
+                    </div>
+                    <div class="commentList">
+                        <div class="comment">
+                            <img class="userImg"
+                                src="https://yt3.ggpht.com/ytc/AAUvwnhmeHHu62xly7TKx4vVXSpnoc6d-xUuzOsJpn9piA=s88-c-k-c0x00ffffff-no-rj-mo"
+                                alt="userImg">
+                            <span class="commentInfo">
+                                <div class="info">
+                                    <span class="name">빛별</span>
+                                    <span class="date">1개월 전(수정됨)</span>
+                                </div>
+                                <div class="content">
+                                    거짓말 아니고 실제로 아직도 보는 사람 많이 있음?<br>
+                                    이젠 올라오는 댓글도 줄어서 찾는 사람도 별로 없는 느낌. 그래도 조회수만 보면 아직도 우리 사회엔 위로가 필요한 사람들이 참 많은 듯.
+                                </div>
+                                <div class="function">
+                                    <button class="likeBtn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        <span>881</span>
+                                    </button>
+                                    <button class="unlikeBtn">
+                                        <i class="fas fa-thumbs-down"></i>
+                                        <span></span>
+                                    </button>
+                                    <button class="replyBtn">
+                                        <span>답글</span>
+                                    </button>
+                                </div>
+                            </span>
+                            <button class="moreBtn">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                        <div class="comment">
+                            <img class="userImg"
+                                src="https://yt3.ggpht.com/ytc/AAUvwnhmeHHu62xly7TKx4vVXSpnoc6d-xUuzOsJpn9piA=s88-c-k-c0x00ffffff-no-rj-mo"
+                                alt="userImg">
+                            <span class="commentInfo">
+                                <div class="info">
+                                    <span class="name">빛별</span>
+                                    <span class="date">1개월 전(수정됨)</span>
+                                </div>
+                                <div class="content">
+                                    거짓말 아니고 실제로 아직도 보는 사람 많이 있음?<br>
+                                    이젠 올라오는 댓글도 줄어서 찾는 사람도 별로 없는 느낌. 그래도 조회수만 보면 아직도 우리 사회엔 위로가 필요한 사람들이 참 많은 듯.
+                                </div>
+                                <div class="function">
+                                    <button class="likeBtn">
+                                        <i class="fas fa-thumbs-up"></i>
+                                    </button>
+                                    <span class="likeNum">881</span>
+                                    <button class="unlikeBtn">
+                                        <i class="fas fa-thumbs-down"></i>
+                                    </button>
+                                    <span class="unlikeNum"></span>
+                                    <button class="replyBtn">
+                                        <span>답글</span>
+                                    </button>
+                                </div>
+                            </span>
+                            <button class="moreBtn">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="next">
-            <p>다음 동영상</p>
-            <ul>
-                <li>a</li>
-                <li>b</li>
-                <li>c</li>
-                <li>d</li>
-                <li>e</li>
-                <li>d</li>
-                <li>e</li>
+        <!-- Next Contents-->
+        <section class="nextContents">
+            <ul class="contentList">
+                <li class="nextContent">
+                    <img class="thumbnail" src="https://www.videoproc.com/images/vp-seo/16-9-resolutions.jpg"
+                        alt="thumbnail">
+                    <span class="detail">
+                        <span class="title">[IU]'시간의바깥 (above the time)' Live Clip</span>
+                        <span class="channel">이지금 [IU Official]<i class="fas fa-music"></i></span>
+                        <span class="metadata">조회수 291만회•3개월 전</span>
+                    </span>
+                    <button class="moreBtn">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                </li>
             </ul>
-        </div>
-    </article>
-
+        </section>
+    </section>
 </body>
 
 </html>
