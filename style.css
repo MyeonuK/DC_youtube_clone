@@ -16,6 +16,7 @@
     --navBar-padding-size: 30px;
     --horizon-padding-size: 80px;
     --content-padding-size: 15px;
+    --small-content-padding-size: 7.5px;
     --icon-size: 20px;
     --userImg-size: 30px;
     --button-size: 40px;
@@ -128,7 +129,7 @@ a {
 }
 
 .navBar .center .searchBar i {
-    color: var(--searchBar-icon-color);
+    color: var(--gray-text-color);
 }
 .navBar .center .keyboardBtn {
     position: absolute;
@@ -153,7 +154,7 @@ a {
 }
 
 .content {
-    width: 75%;
+    flex: 1;
     padding-right: var(--padding-size);
 }
 
@@ -304,7 +305,7 @@ a {
 .comments .commentsHeader {
     display: flex;
     align-items: center;
-    margin: calc(var(--content-padding-size) / 2) 0;
+    margin: var(--small-content-padding-size) 0;
 }
 .comments .commentsHeader>* {
     font-size: var(--font-large);
@@ -370,12 +371,12 @@ a {
     flex: 1;
 }
 .commentInfo .info .date {
-    padding-left: calc(var(--content-padding-size) / 2);
+    padding-left: var(--small-content-padding-size);
     color: var(--gray-text-color);
 }
 
 .commentInfo .content {
-    padding-top: calc(var(--content-padding-size) / 2);
+    padding-top: var(--small-content-padding-size);
 }
 
 .commentInfo .function {
@@ -388,21 +389,56 @@ a {
 
 .commentInfo .function span {
     color: var(--gray-text-color);
-    margin-left: calc(var(--content-padding-size) / 2);
+    margin-left: var(--small-content-padding-size);
 }
 
 .nextContents {
-    flex: 1;
+    width: 25%;
 }
 
-.nextContents ul {
+.nextContents .contentList {
     width: 100%;
 }
 
-.nextContents li {
+.nextContents .contentList .nextContent {
+    display: flex;
     width: 100%;
 }
 
-.nextContents li img {
+.contentList .nextContent {
+    align-items: flex-start;
+}
+
+.contentList .nextContent .imgContainer {
+    width: 200px;
+}
+
+.nextContent .imgContainer .thumbnail{
     width: 100%;
+}
+
+.contentList .nextContent .detail {
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--content-padding-size);
+}
+
+.nextContent .detail .title {
+    font-size: var(--font-medium);
+    color: var(--white-color);
+}
+
+.nextContent .detail .channel,
+.nextContent .detail .channel i,
+.nextContent .detail .metadata {
+    font-size: var(--font-small);
+    color: var(--gray-text-color);
+}
+
+.nextContent .detail .channel {
+    margin-top: calc(var(--small-content-padding-size) / 2);
+}
+
+.nextContent .detail .channel i {
+    margin-left: var(--small-content-padding-size);
 }
